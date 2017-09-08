@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>main</title>
+    <script th:src="@{/js/main.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+
+        /*]]>*/
+    </script>
+</head>
+<body>
+<div class="header">
+    <div class="logo"><a th:href="@{/}" title="首页"></a></div>
+    <ul class="nav-item">
+        <li><a th:href="@{/}" target="_self">课程</a></li>
+        <li><a th:href="@{/}" target="_self">职业路径</a></li>
+        <li><a th:href="@{/}" target="_self">实战</a></li>
+        <li><a th:href="@{/}" target="_self">猿问</a></li>
+        <li><a th:href="@{/}" target="_self">退出</a></li>
+    </ul>
+</div>
+<div class="main">
+    <div class="user-info">
+        <h3 class="user-name"><span>木粉</span></h3>
+        <p class="about-info">
+            <span class='sexSecret' title="保密"></span>
+            <span class="u-info-learn">学习时长<em>88小时33分</em></span>
+            <span class="u-info-credit"><a th:href="@{/}">积分<em>5</em></a></span>
+            <span class="u-info-mp"><a th:href="@{/}">经验<em>2443</em></a></span>
+        </p>
+        <p class="user-desc">这位同学很懒，木有签名的说~</p>
+        <div class="study-info">
+            <div class="follows">
+                <a th:href="@{/}"><em>1</em></a>
+                <span>关注</span>
+            </div>
+            <div class="followers">
+                <a th:href="@{/}"><em>0</em></a>
+                <span>粉丝</span>
+            </div>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="slider">
+            <div class="user-pic">
+                <div class="user-pic-bg"></div>
+                <img th:src="@{/}" alt=""/>
+                <div class="set-btn"><a th:href="@{/}"><i class="icon-set"></i></a></div>
+            </div>
+            <ul>
+                <li><a th:href="@{/}"><i class="icon-home"></i><span>主页</span></a></li>
+                <li><a th:href="@{/}"><i class="icon-course"></i><span>课程</span></a></li>
+                <li><a th:href="@{/}"><i class="icon-shizhan"></i><span>实战</span></a></li>
+                <li><a th:href="@{/}"><i class="icon-plan"></i><span>路径</span></a></li>
+                <li><a th:href="@{/}"><i class="icon-yuanwen"></i><span>猿问</span></a></li>
+                <li><a th:href="@{/}"><i class="icon-blog"></i><span>手记</span></a></li>
+                <li><a th:href="@{/}"><i class="icon-wiki"></i><span>wiki</span></a></li>
+            </ul>
+        </div>
+        <!--slider end-->
+        <div class="u-container">
+            <div class="c-tab">
+                <div class="tool-left">
+                    <a th:href="@{/}" class="sort-item">最近学习</a>
+                    <a th:href="@{/}" class="sort-item">我的收藏</a>
+                </div>
+                <div class="tool-right">
+                    <div class="tool-all">
+                    <span id="js-columall" class="tool-item">
+                        <span>全部课程</span>
+                        <i class="icon-drop_down"></i>
+                    </span>
+                    </div>
+                </div>
+            </div>
+            <div class="my-space-course">
+                <div class="tl-item-last">
+                    <span class="time">
+                        <b>2017</b>
+                        <em>03月31日</em>
+                    </span>
+                    <div class="course-list-m">
+                        <ul>
+                            <li class="course-one" data-courseid="59" data-uid="3714007">
+                                <div class="course-list-img">
+                                    <a th:href="@{/}" target="_blank">
+                                        <img width="200" height="113" alt="倒计时效果" th:src="@{/}"/>
+                                    </a>
+                                </div>
+                                <div class="course-list-cont">
+                                    <h3 class="study-hd">
+                                        <a th:href="@{/}" target="_blank">倒计时效果</a>
+                                        <span class="i-new">更新完毕</span>
+                                        <div class="share-box">
+                                            <div class="show-box"><i class="icon-down2"></i></div>
+                                            <div class="courses-r">
+                                                <a href="javascript:;" title="收藏" class="follow custom_f">收藏</a>
+                                                <a href="javascript:;" title="删除" class="del">删除</a>
+                                            </div>
+                                        </div>
+                                    </h3>
+                                    <div class="study-points">
+                                        <span class="i-left">已学70%</span>
+                                        <span class="i-mid">用时1小时30分钟</span>
+                                        <span class="i-right">学习至3-2编程练习</span>
+                                    </div>
+                                    <div class="catog-points">
+                                        <span class="i-left"><a th:href="@{/}">笔记<i>0</i></a></span>
+                                        <span class="i-mid"><a th:href="@{/}">代码<i>0</i></a></span>
+                                        <span class="i-right"><a th:href="@{/}">问答<i>0</i></a></span>
+                                        <a th:href="@{/}" target="_blank" class="continute-btn">继续学习</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--分页-->
+            <div class="qa-comment-page">
+                <div class="page">
+                    <span class="disabled-page">首页</span>
+                    <span class="disabled_page">上一页</span>
+                    <a class="active text-page-tag" href="javascript:void(0)">1</a>
+                    <a class="text-page-tag" th:href="@{/}">2</a>
+                    <a class="text-page-tag" th:href="@{/}">3</a>
+                    <a th:href="@{/}">下一页</a>
+                    <a th:href="@{/}">尾页</a>
+                </div>
+            </div>
+        </div>
+        <!--u-container end-->
+    </div>
+    <!--wrap end-->
+</div>
+<div id="footer">
+    <div class="waper">
+        <div class="footerwaper">
+            <div class="followus">
+                <a class="followus-weixin" th:href="javascript:;" target="_blank" title="微信">
+                    <div class="flw-weixin-box"></div>
+                </a>
+                <a class="followus-weibo" th:href="@{/}" target="_blank" title="新浪微博"></a>
+                <a class="followus-qzone" th:href="@{/}" target="_blank" title="QQ空间"></a>
+            </div>
+            <div class="footer_intro">
+                <div class="footer_link">
+                    <ul>
+                        <li><a th:href="@{/}" target="_blank">网站首页</a></li>
+                        <li><a th:href="@{/}" target="_blank" title="企业合作">企业合作</a></li>
+                        <li><a th:href="@{/}" target="_blank">人才招聘</a></li>
+                        <li><a th:href="@{/}" target="_blank">联系我们</a></li>
+                        <li><a th:href="@{/}" target="_blank">讲师招募</a></li>
+                        <li><a th:href="@{/}" target="_blank">常见问题</a></li>
+                        <li><a th:href="@{/}" target="_blank">意见反馈</a></li>
+                        <li><a th:href="@{/}" target="_blank">木克大学</a></li>
+                        <li><a th:href="@{/}" target="_blank">友情链接</a></li>
+                    </ul>
+                </div>
+                <p>Copyright &copy; 2017 soso All Rights Reserved | 京ICP备 13046642号-2</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

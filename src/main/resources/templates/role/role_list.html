@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>role_list</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+
+<div th:unless="${#lists.isEmpty(roles)}">
+    <dl th:each="role : ${roles}">
+        <dt class="bookHeadline">
+            <span th:text="${role.id}">Id</span>
+        </dt>
+        <dd class="bookDescription">
+            <span th:if="${role.name}" th:text="${role.name}">Name:</span>
+            <span th:if="${role.name eq null}">No role.name available</span>
+        </dd>
+        <dd class="bookDescription">
+            <span th:if="${role.functionIds}" th:text="${role.functionIds}">FunctionIds:</span>
+            <span th:if="${role.functionIds eq null}">No role.functionIds available</span>
+        </dd>
+    </dl>
+</div>
+<div th:if="${#lists.isEmpty(roles)}">
+    <p>You have no roles in your roles list</p>
+</div>
+
+
+<form method="post" action="addEditRole">
+    <label for="name">name:</label>
+    <input type="text" name="name" size="50"/><br/>
+    <label for="functionIds">functionIds:</label>
+    <input type="text" name="functionIds" size="50"/><br/>
+    <input type="submit" value="add/edit"/>
+</form>
+<form method="post" action="deleteRole">
+    <label for="id">Id:</label>
+    <input type="text" name="id" size="10"/><br/>
+    <input type="submit" value="delete"/>
+</form>
+</body>
+</html>

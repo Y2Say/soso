@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+<div th:unless="${#lists.isEmpty(users)}">
+    <dl th:each="user : ${users}">
+
+        <dd class="bookDescription">
+            <span th:if="${user.name}" th:text="${user.name}">FunctionIds</span>
+            <span th:if="${user.name eq null}">No role.functionIds available</span>
+        </dd>
+    </dl>
+</div>
+<div th:if="${#lists.isEmpty(users)}">
+    <p>You have no users in your users list</p>
+</div>
+</body>
+</html>

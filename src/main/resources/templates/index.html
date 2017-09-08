@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>首页</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"></link>
+</head>
+<body>
+
+<form method="get" action="login">
+    <label for="name">name:</label>
+    <input type="text" name="name" size="20"/><br/>
+    <label for="password">password:</label>
+    <input type="text" name="password" size="20"/><br/>
+    <input type="submit" value="login"/>
+</form>
+<hr/>
+<div>
+    <a th:href="registerpage">register</a>
+</div>
+</body>
+</html>
